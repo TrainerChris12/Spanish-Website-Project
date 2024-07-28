@@ -1,21 +1,124 @@
 /* Styles for Mobile Devices*/
-.navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: red solid 1px;
-    height: 50px;
-    width: 100%;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2%;
+}
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr  1fr  1fr;
+    grid-template-rows: 20% 1fr .5fr 1fr 1fr;
+    grid-template-areas:
+        "navigation navigation navigation"
+        "title title title"
+        "languageDropdown languageDropdown languageDropdown"
+        "storyPrompt storyPrompt storyPrompt"
+        "story story translation";
+    grid-gap: 1rem;
+    background: lightsalmon;
+    border: 2px solid black;
+    height: 75vh;
+}
+
+.navLinks li a {
+    text-decoration: none;
+}
+
+.navLinks li a:hover {
+    color: aliceblue;
+}
+
+.navLinks li a:active {
+    color: goldenrod;
+}
+
+.navLinks li a:visited {
+    color: black;
 }
 
 #navBarImage {
+    grid-area: navigation;
+    position: absolute;
     max-width: 100%;
     max-height: 100%;
-    margin-left: 10%;
-    padding: 0 20px 0 20px;
-    border: blue solid 1px;
+    background-color: saddlebrown;
+    border: black solid 1px;
+    left: 10%;
 }
 
 .navigationOptionsContainer {
-    border: green solid 1px;
+    border: solid red 1px;
+    position: absolute;
+    right: 0;
+    width: 60%;
 }
+
+.navBar {
+    position: relative;
+    grid-area: navigation;
+    display: flex;
+    justify-content: center;
+    background-color: salmon;
+    border: 2px solid black;
+}
+
+.bar {
+    height: 4px;
+    width: 30px;
+    margin-bottom: 5px;
+    background-color: black;
+}
+
+#menuIcon {
+    grid-area: navigation;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.navLinks.active {
+    display: flex;
+}
+
+.welcome {
+    grid-area: title;
+    border: black solid 1px;
+    align-self: center;
+    justify-self: center;
+    font-size: 5vw;
+}
+
+
+.languageSelectionMenu {
+    grid-area: languageDropdown;
+    border: black solid 1px;
+}
+
+
+.storyGeneratorContainer {
+    grid-area: storyPrompt;
+    border: black solid 1px;
+}
+
+.storyContainer {
+    grid-area: story;
+    border: black solid 1px;
+}
+
+.translationOfStory {
+    grid-area: translation;
+}
+

@@ -10,28 +10,46 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    <nav class = 'navBar'>
-        <img id ='navBarImage' src = "https://via.placeholder.com/150" alt="Placeholder Image">
-        <div class = 'navigationOptionsContainer'>
-            <div class = 'nav-options'>
+    <div class = 'mainGrid'>
+
+        <nav class = 'navBar'>
+            <img id ='navBarImage' src = "https://via.placeholder.com/150" alt="Placeholder Image">
+            <div id = 'menuIcon'>
+                <div class='bar'></div>
+                <div class='bar'></div>
+                <div class='bar'></div>
+            </div>
+            <div class = 'navigationOptionsContainer'>
+                <ul class = 'navLinks'>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1 class = 'welcome'>Welcome to Spanish Story Generator!</h1>
+        <div class = 'languageSelectionMenu'>
+            <div class = 'languageOptions'>
                 <a href="#">Home</a>
                 <a href="#">Home</a>
                 <a href="#">Home</a>
                 <a href="#">Home</a>
             </div>
         </div>
-    </nav>
+        <div class = 'storyGeneratorContainer'>
+            <textarea name="storyPrompt" id="prompt" cols="30" rows="2"
+                      placeholder="What should the story be about?"></textarea>
+            <button>Generate</button>
+        </div>
 
-    <div class = 'storyGeneratorContainer'>
-        <h1>Welcome to Spanish Story Generator!</h1>
-        <textarea name="storyPrompt" id="prompt" cols="30" rows="2"
-                  placeholder="What should the story be about?"></textarea>
-        <button>Generate</button>
-    </div>
-
-    <div class = 'storyContainer'>
-        <p id = 'story'></p>
-        <button id = 'translateStoryButton'>Translate to English</button>
+        <div class = 'storyContainer'>
+            <p id = 'story'></p>
+        </div>
+        <div class = 'translationOfStory'>
+            <p id = 'translatedStory'></p>
+            <button id = 'translateStoryButton'>Translate to English</button>
+        </div>
     </div>
 
     <footer>
@@ -47,5 +65,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
