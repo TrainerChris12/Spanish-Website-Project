@@ -1,124 +1,65 @@
-/* Styles for Mobile Devices*/
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
-body {
-    padding: 2%;
-}
-.mainGrid {
-    display: grid;
-    grid-template-columns: 1fr  1fr  1fr;
-    grid-template-rows: 20% 1fr .5fr 1fr 1fr;
-    grid-template-areas:
-        "navigation navigation navigation"
-        "title title title"
-        "languageDropdown languageDropdown languageDropdown"
-        "storyPrompt storyPrompt storyPrompt"
-        "story story translation";
-    grid-gap: 1rem;
-    background: lightsalmon;
-    border: 2px solid black;
-    height: 75vh;
-}
-
-.navLinks li a {
+a {
+    color: black;
     text-decoration: none;
 }
 
-.navLinks li a:hover {
-    color: aliceblue;
-}
-
-.navLinks li a:active {
-    color: goldenrod;
-}
-
-.navLinks li a:visited {
-    color: black;
-}
-
-#navBarImage {
-    grid-area: navigation;
-    position: absolute;
+.logo {
     max-width: 100%;
     max-height: 100%;
-    background-color: saddlebrown;
-    border: black solid 1px;
-    left: 10%;
+    width: 100px;
+    height: 100px;
 }
 
-.navigationOptionsContainer {
-    border: solid red 1px;
-    position: absolute;
-    right: 0;
-    width: 60%;
-}
-
-.navBar {
-    position: relative;
-    grid-area: navigation;
+.navContainer {
     display: flex;
-    justify-content: center;
-    background-color: salmon;
-    border: 2px solid black;
+    flex-direction: column;
+    justify-content: space-between;
+    border: red solid 1px;
+    position: relative;
+}
+
+.mainGrid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas:
+    "nav nav nav"
+    "h1 h1 h1"
+    "about about about"
+    "storyPrompt storyPrompt storyPrompt"
+    "input input input"
+    "footer footer footer";
+}
+
+/* Mobile Design */
+.navLinksContainer {
+    display: none;
+    flex-direction: column;
+    border: red solid 1px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.navLinksContainer ul li {
+    padding: 10px 0 10px 0;
+    list-style: none;
+}
+
+
+.hamburgerIcon {
+    position: absolute;
+    top: 35px;
+    right: 45px;
 }
 
 .bar {
-    height: 4px;
+    height: 5px;
     width: 30px;
-    margin-bottom: 5px;
+    margin: 5px 0 5px 0;
     background-color: black;
 }
-
-#menuIcon {
-    grid-area: navigation;
-    position: absolute;
-    top: 30%;
-    right: 10%;
-
-}
-
-.navLinks {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-
-}
-
-.navLinks.active {
-    display: flex;
-}
-
-.welcome {
-    grid-area: title;
-    border: black solid 1px;
-    align-self: center;
-    justify-self: center;
-    font-size: 5vw;
-}
-
-
-.languageSelectionMenu {
-    grid-area: languageDropdown;
-    border: black solid 1px;
-}
-
-
-.storyGeneratorContainer {
-    grid-area: storyPrompt;
-    border: black solid 1px;
-}
-
-.storyContainer {
-    grid-area: story;
-    border: black solid 1px;
-}
-
-.translationOfStory {
-    grid-area: translation;
-}
-
