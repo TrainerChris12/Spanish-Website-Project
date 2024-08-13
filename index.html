@@ -15,9 +15,9 @@
         <div class = 'navLinksContainer'>
             <ul>
                 <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="#">Generated Stories</a></li>
             </ul>
         </div>
         <div class = 'hamburgerIcon'>
@@ -26,13 +26,30 @@
             <div class = 'bar'></div>
         </div>
     </nav>
-    <h1>Welcome to the Spanish Story Generator!</h1>
-    <p class="about"></p>
+    <h1 class="title">Welcome to the Spanish Story Generator!</h1>
     <div class = 'storyPromptContainer'>
-        <form action="">
+        <form action="" id="storyForm">
             <label for="storyPrompt">Enter a Prompt:</label>
-            <input type="text" id="storyPrompt" placeholder="Write me a story about dogs!">
+            <div class="promptAndButton">
+                <input type="text" id="storyPrompt" placeholder="Write me a story about dogs!">
+                <button class="storyButton" type="submit"></button>
+            </div>
         </form>
     </div>
+    <div id="currentStory"></div>
+    <div class="userVocabulary"></div>
+    <div class="aboutSection">Lorem ipsum odor amet, consectetuer adipiscing elit. Pellentesque sapien finibus
+        convallis diam rutrum rutrum. Integer nam et aenean diam; nisl orci ultricies nam. Cubilia cubilia habitasse
+        luctus luctus nam sodales. Arcu elit at praesent sollicitudin convallis auctor. Phasellus metus dis sed lectus,
+        rutrum nulla facilisi tristique curabitur. Ridiculus dis sit dolor congue massa vehicula conubia.</div>
+    <footer>
+        <div class="footerLinks">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Vocabulary</a></li>
+                <li><a href="#">Generated Stories</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
